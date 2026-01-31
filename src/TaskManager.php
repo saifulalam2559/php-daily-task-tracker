@@ -26,7 +26,9 @@ class TaskManager {
         return $this->tasks;
     }
 
+    // private
     private function save() {
         file_put_contents($this->file, json_encode($this->tasks, JSON_PRETTY_PRINT));
     }
 }
+
